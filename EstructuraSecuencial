@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    float  x,y,r;
+    cout<<"Escribir variable x:";
+    cin>>x;
+    cout<<"Escribir variable y:";
+    cin>>y;
+    r=(x+y)/2;
+    cout<<"El resultado de la estructura secuencial es:"<<r;
+    
+  
+
+    return 0;
+}
