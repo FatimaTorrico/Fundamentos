@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    float  l1,l2,l3,s,area;
+    cout<<"Escribe lado 1:";
+    cin>>l1;
+    cout<<"Escriba lado 2:";
+    cin>>l2;
+    cout<<"Escriba lado 3:";
+    cin>>l3;
+    s=(l1+l2+l3)/2;
+    area= sqrt(s*(s-l1)*(s-l2)*(s-l3));
+    cout<<"El resultado del area es: "<<area<< "unidades cuadradas";
+  
+
+    return 0;
+}
