@@ -1,0 +1,42 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    
+  float x1,y1,x2,y2,x3,y3,A1,A2,A3,delta,delta_d,delta_e,delta_f,D,E,F;
+  cout<<"Ingresar el valor de x1:";
+  cin>>x1;
+  cout<<"Ingresar el valor de y1:";
+  cin>>y1;
+  cout<<"Ingresar el valor de x2:";
+  cin>>x2;
+  cout<<"Ingresar el valor de y2:";
+  cin>>y2;
+  cout<<"Ingresar el valor de x3:";
+  cin>>x3;
+  cout<<"Ingresar el valor de y3:";
+  cin>>y3;
+  A1= -(pow(x1,2)+pow(y1,2));
+  A2= -(pow(x2,2)+pow(y2,2));
+  A3= -(pow(x3,2)+pow(y3,2));
+  delta=x1*(y2-y3-y1)*(x2-x3)+1*(x2*y3-x3*y2);
+  if (delta==0)
+      cout<<"Los puntos son colineales, no forman una circunferenca";
+  else
+    {
+        delta_d= A1 * (y2 - y3) - y1 * (A2 - A3) + 1 * (A2 * y3-A3* y2);
+        delta_e= x1 * (A2 - A3) - A1 * (x2 - x3) + 1 * (x2 * A3- x3 *A2);
+        delta_f= (x1 * (y2 * A3 - y3 * A2) - y1 * (x2*A3-x3*A2)+A1*(x2*y3-x3*y2));
+        D=delta_d/delta;
+        E=delta_e/delta;
+        F=delta_f/delta;
+        cout << "Coordenada del centro x: "<<-D/2<<endl;
+        cout << "Coordenada del centro y: " <<-E/2<<endl;
+        cout << "Radio de la circunferencia :" <<sqrt(pow(-D/2,2)+pow(-E/2,2)-F);     
+
+  
+    }
+   return 0;
+}
