@@ -29,8 +29,8 @@ int main()
                 x1=-b/(2*a);
                 x2=sqrt(-d)/2*a;
             
-                cout<<"El valor de la primera raiz x1 es:"<<x1<<"+"<<x2<<"i";
-                cout<<"El valor de la primera raiz x2 es:"<<x1<<"-"<<x2<<"i";}
+                cout<<"El valor de la primera raiz x1 es:"<<x1<<"+"<<x2<<"i"<<endl;
+                cout<<"El valor de la primera raiz x2 es:"<<x1<<"-"<<x2<<"i"<<endl;}
  
 
   
