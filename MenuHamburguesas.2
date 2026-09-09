@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int cantidad,opcion,canham=0,canhamq=0,canpapas=0,canso=0;
+    float totalparcial,precio,totalham=0,totalhamq=0,totalpapas=0,totalso=0;
+    do{
+    cout<<"----------Menu---------"<<endl;
+    cout<<"1.Hamburguesa  Bs.3"<<endl;
+    cout<<"2.Hamburguesa con queso  Bs.5"<<endl;
+    cout<<"3.Papas fritas  Bs.2"<<endl;
+    cout<<"4.Soda  Bs.2.5"<<endl;
+    cout<<"0.Salir"<<endl;
+    
+    cout<<"Ingrese la opcion que desea: ";
+    cin>>opcion; 
+    switch (opcion)
+    {
+        case 1: 
+        do{
+        cout<<"Que cantidad de hamburguesas desea?:";cin>>cantidad;
+       } while(cantidad>0);
+        canham=canham+cantidad;
+        totalparcial=cantidad*3;
+        totalham=totalham+totalparcial;
+        break;
+        
+         case 2: 
+         cout<<"Que cantidad de hamburguesas de queso desea?:";cin>>cantidad;
+        totalparcial=cantidad*5;
+        totalhamq=totalhamq+totalparcial;
+        break;
+        
+         case 3: 
+         cout<<"Que cantidad de papas fritas desea?:";cin>>cantidad;
+        totalparcial=cantidad*2;
+        totalpapas=totalpapas+totalparcial;
+        break;
+         case 4: 
+          cout<<"Que cantidad de sodas desea?:";cin>>cantidad;
+        totalparcial=cantidad*2.5;
+        totalso=totalso+totalparcial;
+        break;
+         case 0: 
+          cout<<"|Saliste del menu|"<<endl;
+        break;
+        default:
+           cout<<"OPCION INVALIDA"<<endl;
+    }
+    }while(opcion!=0);
+    cout<<" ITEM                      CANTIDAD  TOTAL PARCIAL"<<endl;
+    cout<<"Hamburguesa          (3bs)    "<<canham<<"\t        "          <<totalham<<endl;
+    cout<<"Hamburguesa de queso (5bs)    "<<canhamq<<"\t       "          <<totalhamq<<endl;
+    cout<<"Papas fritas         (2bs)    "<<canpapas<<"\t        "        <<totalpapas<<endl;
+    cout<<"Soda                 (2bs)    "<<canso<<"\t        "           <<totalso<<endl;
+    cout<<"T O T A L                     "<<canham+canhamq+canpapas+canso<<"\t       " <<totalham+totalhamq+totalpapas+totalso<<endl;    
+    
+
+    
+    return 0;
+}
