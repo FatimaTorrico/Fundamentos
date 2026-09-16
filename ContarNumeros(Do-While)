@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int cont=0,suma=0,n;
+    cout<<"Ingresar la cantidad deelementos desea:"<<endl;
+    cin>>n;
+    if(n>=0){
+      do{
+        suma=suma+(cont*cont);cont++;
+        cout<<suma<<","<<endl;
+    }while(cont<=n);
+     }
+    cout<<"El resultado de la suma es :"<<suma<<endl;
+    return 0;
+}
